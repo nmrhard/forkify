@@ -29,6 +29,8 @@ const controlRecipe = async function() {
   }
 };
 
-['hashchange', 'load'].forEach(evt => { 
-  window.addEventListener(evt, controlRecipe);
-});
+const init = function() {
+  recipeView.addHandlerRender(controlRecipe);
+}
+
+init();
